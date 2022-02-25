@@ -5,8 +5,9 @@ on: push
 jobs:
   # build – произвольно выбранное имя задания
   # их может быть больше одного
-  build:
+  Hello-world:
     # операционная система для работы воркфлоу
     runs-on: ubuntu-latest
     steps: # список шагов, которые надо выполнить
-      - run: echo "🎉 The job was automatically triggered"
+      - uses: shivammathur/setup-php@v2
+      - run: make say-hello
